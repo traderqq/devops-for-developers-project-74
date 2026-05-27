@@ -3,8 +3,6 @@
 
 # Hexlet DevOps Lesson Project #1
 
-[![push](https://github.com/traderqq/devops-for-developers-project-74/actions/workflows/push.yml/badge.svg)](https://github.com/traderqq/devops-for-developers-project-74/actions/workflows/push.yml)
-
 Учебный DevOps-проект: упаковка Fastify-приложения в Docker, запуск через Docker Compose, подключение PostgreSQL, Caddy reverse proxy и CI/CD через GitHub Actions с публикацией образа на Docker Hub.
 
 После запуска приложение будет доступно по https (с http будет редирект), прямой доступ закрыт, открывать будет Caddy с самоподписанным сертификатом (браузеры могут ругаться)
