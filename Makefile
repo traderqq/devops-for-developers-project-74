@@ -1,15 +1,18 @@
 COMPOSE = docker compose
 
-setup:
+prepare-env:
+	@test -f .env || cp .env.example .env
+
+setup: prepare-env
 	$(COMPOSE) run --rm app make setup
 
-test:
+test: prepare-env
 	$(COMPOSE) -f docker-compose.yml up --abort-on-container-exit --exit-code-from app
 
-ci:
+ci: prepare-env
 	$(COMPOSE) -f docker-compose.yml up --abort-on-container-exit --exit-code-from app
 
-dev:
+dev: prepare-env
 	$(COMPOSE) up
 
 down:
